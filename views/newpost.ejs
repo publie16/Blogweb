@@ -1,0 +1,52 @@
+<%-include("partials/header.ejs")%>
+<%if(time >= 19 || time <= 5){%>
+  <body id="gradient-canvas-night">
+<h1 style="color:white; text-align:center; font-family: 'Times New Roman', Times, serif;">Fresh Start again. What Are your thoughts tonight? <br> <hr class="break"></h1>
+<form action="/post" method="POST">
+    <label for="posttitle" class="nightlabel">Title:</label>
+    <input type="text" id="title" name="newtitle"  style="background-color: rgba(0, 0, 0, 0.436); color:white;" required>
+    <div class="mb-3">
+  <label for="post" class="form-label nightlabel">Post</label>
+  <textarea class="form-control postregion" id="post" name="newpost" placeholder="Write something..." style="background-color: rgba(0, 0, 0, 0.436); color:white; " required></textarea>
+</div>
+    <label for="desc" class="nightlabel">Description:</label>
+    <input type="text" id="desc" name="newdesc"  style="background-color: rgba(0, 0, 0, 0.436); color:white;" required>
+    <br>
+    <label for="gender" class="nightlabel">Select Category:</label>
+    <select id="category" name="category" class="dropdown-menu position-static d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px" data-bs-theme="dark">
+      <option value="social" class="dropdown-item rounded-2">Social</option>
+      <option value="culture/history" class="dropdown-item rounded-2">Culture / History</option>
+      <option value="science/technology" class="dropdown-item rounded-2">Science and Technology</option>
+      <option value="innovative/interesting" class="dropdown-item rounded-2">Innovating and Interesting</option>
+    </select>
+    <br>
+    <input type="submit" value="Upload" class="btn btn-outline-light">
+  </form>
+</body>
+
+<%}else{%>
+  <body id="gradient-canvas-day">
+  
+    <h1 style="color:rgb(7, 0, 0); text-align:center; font-family: 'Times New Roman', Times, serif;"> Fresh Start again. What Are your thoughts today? <br> <hr class="break"></h1>
+<form action="/post" method="POST">
+    <label class="daylabel" for="posttitle">Title:</label>
+    <input type="text" id="title" name="newtitle" style="background-color: rgba(255, 255, 255, 0.427);" required>
+    <div class="mb-3">
+  <label for="post" class="form-label daylabel">Post</label>
+  <textarea class="form-control postregion" id="post" name="newpost" placeholder="Write something..." style="background-color: rgba(255, 255, 255, 0.427);" required></textarea>
+</div>
+    <label for="desc" class="daylabel" >Description:</label>
+    <input type="text" id="desc" name="newdesc" style="background-color: rgba(255, 255, 255, 0.427);" required>
+    <br>
+    <label for="gender" class="nightlabel">Select Category:</label>
+    <select id="category" name="category" class="dropdown-menu position-static d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px" data-bs-theme="light">
+      <option value="social" class="dropdown-item rounded-2">Social</option>
+      <option value="culture/history" class="dropdown-item rounded-2">Culture / History</option>
+      <option value="science/technology" class="dropdown-item rounded-2">Science and Technology</option>
+      <option value="innovative/interesting" class="dropdown-item rounded-2">Innovating and Interesting</option>
+    </select>
+    <br>
+    <input type="submit" value="Upload" class="btn btn-outline-light">
+  </form>
+</body>
+<%}%>

@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+<body class="bg-wrapper">
+<form action="/editpost/<%= post.id %>" method="POST">
+  <label for="content" style="color:black; text-align: center;"><strong>Blog Content:</strong></label><br><hr class="break">
+
+  <input class="form-control" name="newtitle" value="<%= post.title %>" required><br>
+  <input class="form-control" name="newdesc" value="<%= post.desc %>" required><br>
+  <textarea class="form-control postregion" name="newcontent" required><%= post.content %></textarea>
+
+  <button type="submit" class="btn btn-dark mt-2">Save Changes</button>
+</form>
+</body>

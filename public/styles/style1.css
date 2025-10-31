@@ -1,0 +1,106 @@
+.title{
+    font-size: 40px;
+}
+li{
+    border: black;
+    border-radius: 1rem;
+}
+.custom-title {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  font-size: 3.5rem;
+  color: #4d3c2d; /* soft brown or accent */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.bgcolor{
+    background: #f0b4bc;
+background: linear-gradient(90deg, rgba(240, 180, 188, 1) 15%, rgba(255, 255, 255, 1) 71%, rgba(255, 255, 255, 1) 100%);
+}
+
+.thumbnail{
+    padding:2rem;
+}
+.break{
+    opacity: 0.5;
+}
+.postregion{
+    max-width:91.5rem;
+    height:20rem;
+}
+.nightlabel{
+  color:white;
+}
+.daylabel{
+  color:black;
+}
+body{
+    padding:2rem;
+}
+
+
+#gradient-canvas-night {
+  width: 100%;
+  min-height: 100vh;
+  /* ✅ Declare the gradient color variables here */
+  --gradient-color-1: #290e35;
+  --gradient-color-2: #47103e;
+  --gradient-color-3: #170644;
+  --gradient-color-4:#2d0404;
+
+  /* ✅ Apply the gradient background */
+  background: linear-gradient(
+    135deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2),
+    var(--gradient-color-3),
+    var(--gradient-color-4)
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  z-index: -1;
+}
+
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.bg-wrapper {
+  background-image: url("/imgs/bloombgposts.jpg");
+  background-size: cover;       /* Makes it responsive */
+  background-position: center;  /* Keeps it centered */
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+#gradient-canvas-day {
+  width: 100%;
+  min-height: 100vh;
+  /* ✅ Declare the gradient color variables here */
+  --gradient-color-1: #efbe7d;
+  --gradient-color-2: #e794c3;
+  --gradient-color-3: #a8eeef;
+  --gradient-color-4:#eaa2a2;
+
+  /* ✅ Apply the gradient background */
+  background: linear-gradient(
+    135deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2),
+    var(--gradient-color-3),
+    var(--gradient-color-4)
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  z-index: -1;
+}
+
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
